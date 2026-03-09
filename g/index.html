@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>가디언스 라이프 | Guardian's Life - 고품격 장례 서비스</title>
+    <meta name="description" content="신뢰와 정성을 다하는 가디언스 라이프 장례 서비스입니다. 봉안당, 수목장, 장례 절차 안내 등 최선을 다해 도와드립니다.">
+    <!-- Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&family=Noto+Serif+KR:wght@400;700&display=swap"
+        rel="stylesheet">
+    <!-- Swiper.js CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <!-- AOS CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header id="header">
+        <div class="container flex justify-between align-center">
+            <h1 class="logo">
+                <a href="#"><img src="g/로고.png" alt="가디언스 라이프"></a>
+            </h1>
+            <nav class="gnb">
+                <ul class="flex">
+                    <li><a href="pages/intro.html">회사소개</a></li>
+                    <li><a href="pages/products.html">장례상품</a></li>
+                    <li><a href="pages/procedure.html">장례절차</a></li>
+                    <li><a href="pages/locations.html">장례지안내</a></li>
+                    <li><a href="pages/video.html">영상설명</a></li>
+                    <li><a href="pages/consultation.html">상담신청</a></li>
+                </ul>
+            </nav>
+            <div class="mobile-menu-btn">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Layer Popup (Swiper.js) -->
+        <div id="layer-popup" class="layer-popup">
+            <div class="popup-container">
+                <div class="swiper main-popup-swiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide"><img src="g/1.png" alt="팝업 1"></div>
+                        <div class="swiper-slide"><img src="g/2.png" alt="팝업 2"></div>
+                        <div class="swiper-slide"><img src="g/3.png" alt="팝업 3"></div>
+                    </div>
+                    <div class="swiper-pagination"></div>
+                </div>
+                <div class="popup-footer flex justify-between align-center">
+                    <label><input type="checkbox" id="today-close"> 오늘 하루 보지 않기</label>
+                    <button id="popup-close">닫기</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Home Section -->
+        <section id="home">
+            <div class="hero">
+                <div class="spline-container">
+                    <iframe src="https://my.spline.design/cybermannequin-TfpqgGjI5SZci5BlyBKGM1lX/" frameborder="0"
+                        width="100%" height="100%"></iframe>
+                </div>
+                <div class="hero-content" data-aos="fade-up">
+                    <img src="g/슬로건.png" alt="가디언스 라이프 슬로건">
+                    <p class="brand-text-korean">수호 상조</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Company Introduction -->
+        <section id="intro" class="section">
+            <div class="container">
+                <div class="section-title" data-aos="fade-up">
+                    <h2>Company Introduction</h2>
+                    <p>가디언스 라이프는 신뢰와 정직을 바탕으로 마지막 가시는 길을 정성껏 모십니다.</p>
+                </div>
+                <div class="intro-content flex align-center">
+                    <div class="intro-img" data-aos="fade-right">
+                        <img src="g/4.png" alt="가디언스 라이프 서비스">
+                    </div>
+                    <div class="intro-text" data-aos="fade-left">
+                        <h3>가장 소중한 분을 위한<br><span>마지막 동행, 가디언스 라이프</span></h3>
+                        <p>우리는 단순한 장례 서비스 이상의 가치를 전달합니다. 유가족의 슬픔을 함께 나누고, 고인의 고귀한 삶을 아름답게 마무리할 수 있도록 전문적인 장례 지도사가 24시간
+                            대기하고 있습니다.</p>
+                        <ul class="intro-features">
+                            <li>24시간 긴급 콜센터 운영</li>
+                            <li>정직하고 투명한 정찰제 가격</li>
+                            <li>전문 장례 지도사의 1:1 밀착 서비스</li>
+                        </ul>
+                        <a href="pages/intro.html" class="btn-detail"
+                            style="display:inline-block; width:auto; padding:12px 30px;">회사 소개 더보기</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Funeral Products -->
+        <section id="products" class="section">
+            <div class="container">
+                <div class="section-title" data-aos="fade-up">
+                    <h2>Funeral Products</h2>
+                    <p>정직한 가격과 품격 있는 구성으로 고인의 마지막을 예우합니다.</p>
+                </div>
+                <div class="product-grid">
+                    <!-- (1) 가디언스 베이직 -->
+                    <div class="product-item" data-aos="fade-up" data-aos-delay="100">
+                        <div class="product-summary" onclick="location.href='pages/products.html'">
+                            <div class="product-img"><img src="g/5.png" alt="가디언스 베이직"></div>
+                            <div class="product-info">
+                                <h3>가디언스 베이직 <span class="price-tag">190</span> <span class="eng-sub">Basic</span></h3>
+                                <p class="summary-desc">"꼭 필요한 절차만 담은 실속형 구성"</p>
+                                <ul class="summary-list">
+                                    <li>장례지도사 1명 (3일 총괄)</li>
+                                    <li>접객도우미 미포함</li>
+                                    <li>앰뷸런스 관내 무료</li>
+                                    <li>남/여 상복 3벌씩 제공</li>
+                                </ul>
+                                <a href="pages/products.html" class="btn-detail">자세히 보기</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- (2) 가디언스 스탠다드 -->
+                    <div class="product-item" data-aos="fade-up" data-aos-delay="200">
+                        <div class="product-summary" onclick="location.href='pages/products.html'">
+                            <div class="product-img"><img src="g/1.png" alt="가디언스 스탠다드"></div>
+                            <div class="product-info">
+                                <h3>가디언스 스탠다드 <span class="price-tag">290</span> <span class="eng-sub">Standard</span>
+                                </h3>
+                                <p class="summary-desc">"유가족이 가장 많이 선택하는 표준형"</p>
+                                <ul class="summary-list">
+                                    <li>장례지도사 + 입관지도사 2명</li>
+                                    <li>접객도우미 3명 지원</li>
+                                    <li>리무진 OR 장의버스 택 1</li>
+                                    <li>남/여 상복 4벌씩 제공</li>
+                                </ul>
+                                <a href="pages/products.html" class="btn-detail">자세히 보기</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- (3) 가디언스 프리미엄 -->
+                    <div class="product-item" data-aos="fade-up" data-aos-delay="300">
+                        <div class="product-summary" onclick="location.href='pages/products.html'">
+                            <div class="product-img"><img src="g/6.png" alt="가디언스 프리미엄"></div>
+                            <div class="product-info">
+                                <h3>가디언스 프리미엄 <span class="price-tag">390</span> <span class="eng-sub">Premium</span>
+                                </h3>
+                                <p class="summary-desc">"품격 있는 예를 갖춘 고급형 의전"</p>
+                                <ul class="summary-list">
+                                    <li>전문 장례지도사 및 입관지원</li>
+                                    <li>접객도우미 5명 지원</li>
+                                    <li>리무진 + 장의버스 모두 제공</li>
+                                    <li>남/여 상복 6벌씩 제공</li>
+                                </ul>
+                                <a href="pages/products.html" class="btn-detail">자세히 보기</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- (4) 가디언스 노블레스 -->
+                    <div class="product-item" data-aos="fade-up" data-aos-delay="400">
+                        <div class="product-summary" onclick="location.href='pages/products.html'">
+                            <div class="product-img"><img src="g/8.png" alt="가디언스 노블레스"></div>
+                            <div class="product-info">
+                                <h3>가디언스 노블레스 <span class="price-tag">490</span> <span class="eng-sub">VIP</span></h3>
+                                <p class="summary-desc">"VIP를 위한 최고의 예우와 헌신"</p>
+                                <ul class="summary-list">
+                                    <li>VIP 전담 의전팀 배정</li>
+                                    <li>접객도우미 7명 대거 지원</li>
+                                    <li>리무진 + 장의버스 장거리 지원</li>
+                                    <li>남 8벌 / 여 10벌 상복 제공</li>
+                                </ul>
+                                <a href="pages/products.html" class="btn-detail">자세히 보기</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Funeral Procedures -->
+        <section id="procedure" class="section">
+            <div class="container">
+                <div class="section-title" data-aos="fade-up">
+                    <h2>Funeral Procedures</h2>
+                    <p>복잡한 장례 절차, 가디언스 라이프가 차근차근 도와드립니다.</p>
+                </div>
+                <div class="procedure-steps">
+                    <div class="step-item" data-aos="zoom-in" data-aos-delay="100">
+                        <div class="step-num">01</div>
+                        <h4>장례 접수</h4>
+                        <p>24시간 콜센터 상담 후 즉시 현장으로 출동</p>
+                    </div>
+                    <div class="step-item" data-aos="zoom-in" data-aos-delay="200">
+                        <div class="step-num">02</div>
+                        <h4>장례 진행</h4>
+                        <p>입관, 성복, 발인 등 전 과정 밀착 케어</p>
+                    </div>
+                    <div class="step-item" data-aos="zoom-in" data-aos-delay="300">
+                        <div class="step-num">03</div>
+                        <h4>장지 안치</h4>
+                        <p>봉안당, 수목장 등 최종 안치까지 동행</p>
+                    </div>
+                    <div class="step-item" data-aos="zoom-in" data-aos-delay="400">
+                        <div class="step-num">04</div>
+                        <h4>사후 관리</h4>
+                        <p>행정 절차 및 상속 상담 서비스 지원</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Funeral Locations -->
+        <section id="locations" class="section">
+            <div class="container">
+                <div class="section-title" data-aos="fade-up">
+                    <h2>Funeral Locations</h2>
+                    <p>전국 최적의 장지를 안내해 드립니다.</p>
+                </div>
+                <div class="location-tabs" data-aos="fade-up">
+                    <ul class="tab-menu flex justify-center">
+                        <li class="active" data-tab="tab1">봉안당</li>
+                        <li data-tab="tab2">수목장</li>
+                        <li data-tab="tab3">공원묘지</li>
+                    </ul>
+                    <div class="tab-content active" id="tab1">
+                        <div class="location-item flex align-center">
+                            <div class="location-img"><img src="g/8.png" alt="봉안당"></div>
+                            <div class="location-text">
+                                <h3>품격 있는 안식처, 봉안당</h3>
+                                <p>쾌적하고 현대적인 시설로 고인을 모시는 가장 일반적이고 품격 있는 선택입니다. 철저한 보안과 관리 시스템을 갖추고 있습니다.</p>
+                                <a href="pages/locations.html" class="btn-detail">전국 봉안당 안내</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-content" id="tab2">
+                        <div class="location-item flex align-center">
+                            <div class="location-img"><img src="g/9.png" alt="수목장"></div>
+                            <div class="location-text">
+                                <h3>자연으로의 회귀, 수목장</h3>
+                                <p>사랑하는 이를 자연의 품에 모시는 친환경 장례 방식입니다. 아름다운 숲속에서 영원한 안식을 누릴 수 있는 최적의 장소를 추천합니다.</p>
+                                <a href="pages/locations.html" class="btn-detail">우수 수목장 탐방</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-content" id="tab3">
+                        <div class="location-item flex align-center">
+                            <div class="location-img"><img src="g/6.png" alt="공원묘지"></div>
+                            <div class="location-text">
+                                <h3>영원한 기억의 공간, 공원묘지</h3>
+                                <p>탁 트인 전망과 정갈한 조경이 어우러진 공원묘지입니다. 대대로 가문을 모실 수 있는 평장묘, 매장묘 등 다양한 형태를 제안합니다.</p>
+                                <a href="pages/locations.html" class="btn-detail">공원묘지 분양 문의</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Video Explanations -->
+        <section id="video" class="section">
+            <div class="container">
+                <div class="section-title" data-aos="fade-up">
+                    <h2>Video Explanations</h2>
+                    <p>영상으로 확인하는 가디언스 라이프의 진심입니다.</p>
+                </div>
+                <div class="video-grid">
+                    <div class="video-item" data-aos="fade-up" data-aos-delay="100">
+                        <div class="video-thumb">
+                            <img src="g/1.png" alt="서비스 소개 영상">
+                            <button class="btn-play">▶</button>
+                        </div>
+                        <h4>가디언스 라이프 서비스 소개</h4>
+                    </div>
+                    <div class="video-item" data-aos="fade-up" data-aos-delay="200">
+                        <div class="video-thumb">
+                            <img src="g/2.png" alt="장례 지도사 인터뷰">
+                            <button class="btn-play">▶</button>
+                        </div>
+                        <h4>전문 장례 지도사가 말하는 '정성'</h4>
+                    </div>
+                    <div class="video-item" data-aos="fade-up" data-aos-delay="300">
+                        <div class="video-thumb">
+                            <img src="g/3.png" alt="시설 안내 영상">
+                            <button class="btn-play">▶</button>
+                        </div>
+                        <h4>제휴 장지 및 시설 미리 보기</h4>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Consultation Form -->
+        <section id="consultation" class="section">
+            <div class="container">
+                <div class="section-title" data-aos="fade-up">
+                    <h2>Online Consultation</h2>
+                    <p>궁금하신 점을 남겨주시면 정성을 다해 답변하겠습니다.</p>
+                </div>
+                <div class="form-wrapper" data-aos="fade-up">
+                    <form id="contact-form" class="consult-form">
+                        <div class="form-group">
+                            <label for="name">이름</label>
+                            <input type="text" id="name" placeholder="이름을 입력하세요" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">연락처</label>
+                            <input type="tel" id="phone" placeholder="연락처를 입력하세요" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">상담 내용</label>
+                            <textarea id="message" rows="5" placeholder="궁금하신 내용을 입력하세요"></textarea>
+                        </div>
+                        <button type="submit" class="btn-submit">상담 신청하기</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer id="footer">
+        <div class="container">
+            <div class="footer-top flex justify-between">
+                <div class="footer-logo">
+                    <img src="g/로고.png" alt="가디언스 라이프">
+                </div>
+                <div class="footer-info">
+                    <p>상호명: <strong>가디언스 라이프</strong> | 대표: <strong>이계금</strong></p>
+                    <p>대표번호: <strong>1844-1294</strong> (24시간 상담 가능)</p>
+                    <p>주소: 경기도 광주시 경안안길 6, 2F</p>
+                    <p>Copyright &copy; 2024 Guardian's Life. All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating Buttons -->
+    <div class="floating-btns">
+        <a href="#" class="btn-kakao"><img src="g/제목 없음3.png" alt="카카오톡 상담"></a>
+        <button id="top-btn" class="btn-top">TOP</button>
+    </div>
+
+    <!-- Swiper.js JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <!-- AOS JS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <!-- Custom JS -->
+    <script src="js/main.js"></script>
+    <script>
+        AOS.init();
+    </script>
+</body>
+
+</html>
