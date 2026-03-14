@@ -3122,66 +3122,76 @@ video.header-bg-video {
     font-weight: 700;
 }
 
-/* Section 2: Step Timeline */
+/* Section 2: Step Timeline (Redesigned as Cards) */
 .step-timeline {
-    position: relative;
-    max-width: 1200px; /* Increase max-width for PC */
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
     margin: 60px auto 0;
+    max-width: 1000px;
 }
 
 .step-item {
-    display: flex;
-    align-items: flex-start;
-    gap: 40px;
-    margin-bottom: 30px;
-    padding: 40px;
     background: #fff;
     border-radius: 20px;
-    box-shadow: 0 10px 40px rgba(0,0,0,0.04);
+    box-shadow: 0 15px 45px rgba(0,0,0,0.05);
     border: 1px solid #f0f0f0;
-    transition: 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    overflow: hidden;
+    transition: 0.4s;
+    display: block; /* Change from flex to block to match card structure */
+    padding: 0; /* Remove internal padding, will add to content */
+    width: 100%;
 }
 
 .step-item:hover {
-    transform: translateX(15px);
+    transform: translateY(-8px);
     border-color: var(--secondary-color);
-    background: #fdfdfd;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.1);
 }
 
-.step-num {
-    flex: 0 0 70px;
-    height: 70px;
+.step-tag {
     background: var(--primary-color);
     color: var(--secondary-color);
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    padding: 10px 25px;
+    font-size: 0.9rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    display: inline-block;
+}
+
+.step-card-content {
+    padding: 40px;
+}
+
+.step-card-content h4 {
+    font-family: var(--font-title);
     font-size: 1.8rem;
-    font-weight: 800;
-    font-family: var(--font-title);
-    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
-}
-
-.step-content {
-    flex: 1;
-}
-
-.step-content h4 {
-    font-family: var(--font-title);
-    font-size: 1.6rem;
+    margin-bottom: 25px;
     color: var(--primary-color);
+    position: relative;
+    word-break: keep-all;
+}
+
+.step-card-content h4::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    width: 30px;
+    height: 2px;
+    background: var(--secondary-color);
+}
+
+.step-card-content p {
+    font-size: 1.15rem;
+    color: #555;
+    line-height: 1.8;
     margin-bottom: 12px;
     word-break: keep-all;
 }
 
-.step-content p {
-    font-size: 1.15rem;
-    color: #555;
-    line-height: 1.8;
+.step-card-content p:last-child {
     margin-bottom: 0;
-    word-break: keep-all;
-    text-align: justify;
 }
 
 .step-content strong {
