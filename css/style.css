@@ -2012,6 +2012,7 @@ video.header-bg-video {
 }
 
 /* Tablet / Mobile Optimized */
+.timeline-item {
     padding-left: 100px;
     margin-bottom: 60px;
 }
@@ -2435,12 +2436,11 @@ video.header-bg-video {
     text-align: left;
 }
 
-@media (max-width: 992px) {
-    .ceo-container {
-        gap: 40px;
-    }
-
-    .ceo-headline {
+/* Consultation Page UI */
+.emergency-box {
+    background: linear-gradient(135deg, #e74c3c, #f39c12);
+    padding: 40px 0;
+    margin-bottom: 60px;
     color: var(--white);
     text-align: center;
     box-shadow: 0 10px 30px rgba(231, 76, 60, 0.2);
@@ -3020,6 +3020,393 @@ video.header-bg-video {
     .emergency-label {
         font-size: 0.9rem;
         padding: 8px 20px;
+    }
+}
+
+/* --- Condolence Etiquette Page Styling --- */
+
+.etiquette-section {
+    padding: 80px 0;
+}
+
+.section-divider {
+    border: 0;
+    height: 1px;
+    background: linear-gradient(to right, transparent, #eee, transparent);
+    margin: 40px 0;
+}
+
+/* Section 1: Clothing Cards */
+.clothing-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+    margin-top: 50px;
+}
+
+.clothing-card {
+    background: #fff;
+    border-radius: 20px;
+    box-shadow: 0 15px 45px rgba(0,0,0,0.05);
+    border: 1px solid #f0f0f0;
+    overflow: hidden;
+    transition: 0.4s;
+}
+
+.clothing-card:hover {
+    transform: translateY(-10px);
+    border-color: var(--secondary-color);
+    box-shadow: 0 20px 60px rgba(0,0,0,0.1);
+}
+
+.clothing-card .card-tag {
+    background: var(--primary-color);
+    color: var(--secondary-color);
+    padding: 10px 25px;
+    font-size: 0.9rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.clothing-card .card-content {
+    padding: 40px;
+}
+
+.clothing-card h3 {
+    font-family: var(--font-title);
+    font-size: 1.8rem;
+    margin-bottom: 25px;
+    color: var(--primary-color);
+    position: relative;
+}
+
+.clothing-card h3::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    width: 30px;
+    height: 2px;
+    background: var(--secondary-color);
+}
+
+.clothing-card ul {
+    list-style: none;
+    padding: 0;
+}
+
+.clothing-card ul li {
+    font-size: 1.1rem;
+    color: #555;
+    margin-bottom: 15px;
+    line-height: 1.7;
+    position: relative;
+    padding-left: 20px;
+}
+
+.clothing-card ul li::before {
+    content: '•';
+    position: absolute;
+    left: 0;
+    color: var(--secondary-color);
+    font-weight: bold;
+}
+
+.clothing-card strong {
+    color: var(--primary-color);
+    font-weight: 700;
+}
+
+/* Section 2: Step Timeline */
+.step-timeline {
+    position: relative;
+    max-width: 1000px;
+    margin: 60px auto 0;
+}
+
+.step-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 40px;
+    margin-bottom: 50px;
+    padding: 40px;
+    background: #fbfbfb;
+    border-radius: 20px;
+    border: 1px solid #eee;
+    transition: 0.3s;
+}
+
+.step-item:hover {
+    background: #fff;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+}
+
+.step-num {
+    flex: 0 0 70px;
+    height: 70px;
+    background: var(--primary-color);
+    color: var(--secondary-color);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.8rem;
+    font-weight: 800;
+    font-family: var(--font-title);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.step-content {
+    flex: 1;
+}
+
+.step-content h4 {
+    font-family: var(--font-title);
+    font-size: 1.5rem;
+    color: var(--primary-color);
+    margin-bottom: 15px;
+}
+
+.step-content p {
+    font-size: 1.1rem;
+    color: #666;
+    line-height: 1.7;
+    margin-bottom: 10px;
+}
+
+.step-content strong {
+    color: var(--secondary-color);
+    font-weight: 700;
+}
+
+/* Section 3: Highlight Box */
+.hand-position-info {
+    margin: 40px 0 80px;
+}
+
+.highlight-box {
+    background: #1a2533;
+    padding: 60px 40px;
+    border-radius: 30px;
+    color: #fff;
+    text-align: center;
+    border: 2px solid var(--secondary-color);
+    box-shadow: 0 20px 50px rgba(0,0,0,0.2);
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.highlight-box::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(212, 175, 55, 0.05) 0%, transparent 70%);
+    z-index: -1;
+}
+
+.highlight-box h3 {
+    font-family: var(--font-title);
+    font-size: 2rem;
+    color: var(--secondary-color);
+    margin-bottom: 25px;
+    position: relative;
+}
+
+.highlight-box > p {
+    font-size: 1.3rem;
+    margin-bottom: 40px;
+    opacity: 0.9;
+    font-weight: 300;
+}
+
+.hand-flex {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    position: relative;
+}
+
+.hand-item {
+    padding: 30px 50px;
+    background: rgba(255,255,255,0.05);
+    border-radius: 15px;
+    border: 1px solid rgba(255,255,255,0.1);
+    flex: 1;
+    max-width: 300px;
+}
+
+.hand-item .gender {
+    display: block;
+    font-size: 1.1rem;
+    color: #ccc;
+    margin-bottom: 10px;
+}
+
+.hand-item .pos {
+    font-size: 1.6rem;
+    font-weight: 700;
+}
+
+.hand-item.line {
+    width: 2px;
+    height: 60px;
+    background: rgba(212, 175, 55, 0.3);
+    padding: 0;
+    border: 0;
+    flex: 0 0 2px;
+}
+
+/* Section 4: Accordion */
+.accordion-wrap {
+    max-width: 900px;
+    margin: 40px auto 0;
+}
+
+.accordion-item {
+    margin-bottom: 15px;
+    border: 1px solid #eee;
+    border-radius: 12px;
+    overflow: hidden;
+    background: #fff;
+    transition: 0.3s;
+}
+
+.accordion-header {
+    padding: 25px 30px;
+    background: #fff;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: 0.3s;
+}
+
+.accordion-header span {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--primary-color);
+}
+
+.accordion-header .arrow {
+    width: 12px;
+    height: 12px;
+    border-right: 2px solid var(--secondary-color);
+    border-bottom: 2px solid var(--secondary-color);
+    transform: rotate(45deg);
+    transition: 0.3s;
+}
+
+.accordion-item.active .accordion-header {
+    background: #fdfaf4;
+}
+
+.accordion-item.active .arrow {
+    transform: rotate(-135deg);
+    margin-top: 5px;
+}
+
+.accordion-body {
+    height: 0;
+    overflow: hidden;
+    padding: 0 30px;
+    transition: all 0.3s ease;
+    opacity: 0;
+}
+
+.accordion-item.active .accordion-body {
+    height: auto;
+    padding: 0 30px 40px;
+    opacity: 1;
+}
+
+.accordion-body p {
+    font-size: 1.1rem;
+    color: #555;
+    line-height: 1.8;
+    margin-bottom: 10px;
+}
+
+.accordion-body .note {
+    font-size: 1rem;
+    color: #999;
+    font-style: italic;
+    margin-top: 15px;
+}
+
+.sms-box {
+    background: #f5f5f5;
+    padding: 30px;
+    border-radius: 15px;
+    border-left: 4px solid var(--secondary-color);
+    margin-top: 20px;
+}
+
+/* Tablet / Mobile Optimization */
+@media (max-width: 992px) {
+    .clothing-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    .highlight-box h3 {
+        font-size: 1.6rem;
+    }
+    .hand-flex {
+        flex-direction: column;
+        gap: 20px;
+    }
+    .hand-item.line {
+        width: 100px;
+        height: 2px;
+        flex: 0 0 2px;
+    }
+    .hand-item {
+        width: 100%;
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    .etiquette-section {
+        padding: 60px 0;
+    }
+    .step-item {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 30px 20px;
+        gap: 20px;
+    }
+    .step-num {
+        flex: 0 0 60px;
+        height: 60px;
+        font-size: 1.5rem;
+    }
+    .clothing-card .card-content {
+        padding: 30px 20px;
+    }
+    .clothing-card h3 {
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .highlight-box {
+        padding: 40px 20px;
+    }
+    .highlight-box h3 {
+        font-size: 1.4rem;
+    }
+    .accordion-header {
+        padding: 20px;
+    }
+    .accordion-header span {
+        font-size: 1.1rem;
     }
 }
 
