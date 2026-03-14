@@ -1735,6 +1735,248 @@ video.header-bg-video {
 }
 
 .timeline::before {
+/* --- Revised Procedure Page Styling --- */
+
+/* Tab Menu */
+.procedure-tabs {
+    margin-bottom: 50px;
+    border-bottom: 2px solid #eee;
+}
+
+.tab-list {
+    gap: 10px;
+    margin-bottom: -2px; /* Pull up to match border */
+}
+
+.tab-item {
+    padding: 15px 40px;
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #888;
+    cursor: pointer;
+    border-bottom: 3px solid transparent;
+    transition: all 0.3s ease;
+}
+
+.tab-item:hover {
+    color: var(--secondary-color);
+}
+
+.tab-item.active {
+    color: var(--secondary-color);
+    border-bottom-color: var(--secondary-color);
+}
+
+/* Tab Panels Visibility */
+.tab-panel {
+    display: none;
+}
+
+.tab-panel.active {
+    display: block;
+    animation: fadeInUp 0.5s ease both;
+}
+
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Section 1: Prep Checklist */
+.prep-checklist {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    margin-top: 20px;
+}
+
+.checklist-item {
+    background: #fff;
+    padding: 40px 30px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.04);
+    border: 1px solid #f0f0f0;
+    text-align: center;
+    transition: 0.3s;
+}
+
+.checklist-item:hover {
+    transform: translateY(-5px);
+    border-color: var(--secondary-color);
+}
+
+.checklist-item .icon {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+.checklist-item h3 {
+    font-family: var(--font-title);
+    font-size: 1.4rem;
+    margin-bottom: 15px;
+    color: var(--primary-color);
+}
+
+.checklist-item p {
+    font-size: 1rem;
+    color: #666;
+    line-height: 1.7;
+}
+
+.checklist-item strong {
+    color: var(--secondary-color);
+    font-weight: 700;
+}
+
+/* Section 2: Timeline Revision */
+.procedure-timeline {
+    max-width: 900px;
+    margin: 0 auto;
+    position: relative;
+    padding-left: 30px;
+}
+
+.procedure-timeline::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(to bottom, var(--secondary-color), #eee);
+}
+
+.timeline-step {
+    position: relative;
+    padding-bottom: 60px;
+    padding-left: 50px;
+}
+
+.timeline-step::before {
+    content: '';
+    position: absolute;
+    left: -6px;
+    top: 0;
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background: #fff;
+    border: 3px solid var(--secondary-color);
+    z-index: 2;
+}
+
+.timeline-step .day-tag {
+    display: inline-block;
+    padding: 4px 15px;
+    background: var(--secondary-color);
+    color: #fff;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+.timeline-step h3 {
+    font-family: var(--font-title);
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    color: var(--primary-color);
+}
+
+.step-desc ul li {
+    font-size: 1.1rem;
+    color: #555;
+    margin-bottom: 15px;
+    line-height: 1.8;
+}
+
+.step-desc ul li strong {
+    color: var(--primary-color);
+    font-weight: 700;
+    border-bottom: 2px solid rgba(197, 160, 89, 0.3);
+}
+
+/* Section 3: Etiquette Grid */
+.etiquette-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.etiquette-card {
+    background: #fff;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+    border: 1px solid #eee;
+}
+
+.card-header {
+    background: var(--primary-color);
+    color: var(--secondary-color);
+    padding: 20px;
+    font-size: 1.25rem;
+    font-family: var(--font-title);
+    font-weight: 700;
+    text-align: center;
+}
+
+.card-body {
+    padding: 30px 25px;
+}
+
+.card-body ul li {
+    font-size: 1rem;
+    color: #666;
+    margin-bottom: 15px;
+    line-height: 1.6;
+    position: relative;
+    padding-left: 20px;
+}
+
+.card-body ul li::before {
+    content: '•';
+    position: absolute;
+    left: 0;
+    color: var(--secondary-color);
+    font-weight: bold;
+}
+
+.card-body strong {
+    color: var(--primary-color);
+    font-weight: 700;
+}
+
+.procedure-footer-note {
+    text-align: center;
+    margin-top: 80px;
+    font-size: 1rem;
+    color: #999;
+    font-style: italic;
+}
+
+/* Tablet / Mobile Optimized */
+@media (max-width: 992px) {
+    .prep-checklist, .etiquette-grid {
+        grid-template-columns: 1fr;
+    }
+    .tab-item {
+        padding: 15px 20px;
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .tab-list {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    .tab-item {
+        flex: 1;
+        text-align: center;
+        padding: 12px 10px;
+    }
+}
     content: '';
     position: absolute;
     left: 40px;
