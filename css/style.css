@@ -1735,6 +1735,15 @@ video.header-bg-video {
 }
 
 .timeline::before {
+    content: '';
+    position: absolute;
+    left: 40px;
+    top: 0;
+    width: 2px;
+    height: 100%;
+    background: #D4AF37;
+}
+
 /* --- Revised Procedure Page Styling --- */
 
 /* Tab Menu */
